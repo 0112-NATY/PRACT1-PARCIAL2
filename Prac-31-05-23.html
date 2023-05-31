@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica JS</title>
+    <style>
+        body
+        {background-color: bisque;}
+
+        .btn{
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            cursor: pointer;
+            display: inline-block;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="Contenido">
+        <button onclick="ENTRADA()">Enviar</button>
+
+        <script>
+            var SN;
+            function ENTRADA()
+{
+    let random = Math.random();
+    random = Math.random();
+    random = random*100+1;
+    random = Math.trunc(random);
+    let INTENTOS = 0;
+
+    while(true) 
+    {
+        SN=Number.parseInt(prompt("Digite un valor"));
+
+        if (SN ==random)
+        {
+            alert("Es aceptable");
+            alert("Has logrado los "+(INTENTOS)+"intentos");
+            break;
+        }
+        if(SN < random)
+        {
+            alert("Es un numero reducido");
+        }
+        if(SN > random)
+        {
+            alert("Es un numero considerable");
+        }
+        INTENTOS+=1;
+    }
+}
+        </script>
+    </div>
+</body>
+</html>
